@@ -4,20 +4,14 @@
  * - Some OLED Drawing Function function test;
  *
  * by lxyzn from HelTec AutoMation, ChengDu, China
- * 
+ * 成都惠利特自动化科技有限公司
  * www.heltec.cn
  *
  * this project also realess in GitHub:
  * https://github.com/HelTecAutomation/Heltec_ESP32
 */
 
-
-// This example just provide basic function test;
-// For more informations, please vist www.heltec.cn or mail to support@heltec.cn
-
-#include "Arduino.h"
 #include "heltec.h"
-
 
 // Adapted from Adafruit_SSD1306
 void drawLines() {

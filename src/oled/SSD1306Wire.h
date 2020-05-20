@@ -44,7 +44,7 @@ class SSD1306Wire : public OLEDDisplay {
       bool                _doI2cAutoInit = false;
 
   public:
-    SSD1306Wire(uint8_t _address, uint8_t _sda, uint8_t _scl, uint8_t _rst, OLEDDISPLAY_GEOMETRY g = GEOMETRY_128_64) {
+    SSD1306Wire(uint8_t _address, uint8_t _sda, uint8_t _scl, uint8_t _rst, OLEDDISPLAY_GEOMETRY g = GEOMETRY_128_32) {
       setGeometry(g);
 
       this->_address = _address;
@@ -178,5 +178,7 @@ class SSD1306Wire : public OLEDDisplay {
     }
 
 };
+
+//SSD1306Wire display;
 
 #endif

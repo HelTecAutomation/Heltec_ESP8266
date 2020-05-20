@@ -107,7 +107,8 @@ enum OLEDDISPLAY_TEXT_ALIGNMENT {
 
 enum OLEDDISPLAY_GEOMETRY {
   GEOMETRY_128_64   = 0,
-  GEOMETRY_128_32   = 1
+  GEOMETRY_128_32   = 1,
+  GEOMETRY_64_32    = 2 //Wireless Stick
 };
 
 typedef byte (*FontTableLookupFunction)(const byte ch);
@@ -132,7 +133,7 @@ class OLEDDisplay : public Print {
     void wakeup();
 
     // Cycle through the initialization
-    void resetDisplay();
+    void resetDisplay(uint8_t rstPin);
 
     /* Drawing functions */
     // Sets the color of all pixel operations
@@ -270,10 +271,10 @@ class OLEDDisplay : public Print {
 
   protected:
 
-    OLEDDISPLAY_GEOMETRY geometry              = GEOMETRY_128_64;
+    OLEDDISPLAY_GEOMETRY geometry              = GEOMETRY_128_32;
 
     uint16_t  displayWidth                     = 128;
-    uint16_t  displayHeight                    = 64;
+    uint16_t  displayHeight                    = 32;
     uint16_t  displayBufferSize                = 1024;
 
     // Set the correct height, width and buffer for the geometry
@@ -331,3 +332,4 @@ class OLEDDisplay : public Print {
 };
 
 #endif
+
