@@ -11,6 +11,7 @@
 
 #define DISPLAY_WIDTH 128
 #define DISPLAY_HEIGHT 32
+#define OLED_RST 16  //add this line for OLED_RST undefined error when compiling heltec.cpp in platformIO
 
 #endif
 
