@@ -1,5 +1,6 @@
 #include <Wire.h>  // Only needed for Arduino 1.6.5 and earlier
 #include "heltec.h" // alias for `#include "SSD1306Wire.h"
+#include "oled/OLEDDisplayUi.h"
 #include "images.h"
 
 #define DEMO_DURATION 3000
